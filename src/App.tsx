@@ -31,7 +31,8 @@ interface KeyPadProps {
 const KeyPad: React.FC<KeyPadProps> = ({ value, onClick }) => (
     <button className="drum-pad" id={value + "Pad"} onClick={onClick} >
         {value}
-        <audio className="clip" id={value} src={audioObjects[value]?.src} >
+        <audio className="clip" id={value} >
+            <source src={audioObjects[value]?.src} type="audio/mpeg" ></source>
         </audio>
     </button>
 );
