@@ -44,7 +44,7 @@ function App() {
         val: string
     }
     const [displayName, setDisplayName] = useState("PRESS A KEY!");
-    const [grid, setGrid] = useState([
+    const [grid] = useState([
         ["Q", "W", "E"],
         ["A", "S", "D"],
         ["Z", "X", "C"]
@@ -73,26 +73,21 @@ function App() {
     }
 
     const GlobalInputListener = () => {
-        const handleKeyDown = (event) => {
-            const pressedKey = event.key.toUpperCase();
-            //console.log(`${pressedKey}`);
-            //console.log('Key pressed globally:', pressedKey);
-            if (grid.some(row => row.includes(pressedKey))) {
-                handleClick({ val: pressedKey });
-            } else {
-                console.log(`Can't find ${pressedKey}`);
-            }
-            
-
-        };
-
         useEffect(() => {
+            const handleKeyDown = (event: KeyboardEvent) => {
+                const pressedKey = event.key.toUpperCase();
+                if (grid.some(row => row.includes(pressedKey))) {
+                    handleClick({ val: pressedKey });
+                } else {
+                    console.log(`Can't find ${pressedKey}`);
+                }
+            };
             document.addEventListener('keydown', handleKeyDown);
 
             return () => {
                 document.removeEventListener('keydown', handleKeyDown);
             };
-        }, []);
+        }, []); // Empty dependency array
 
         return null;
     };

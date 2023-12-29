@@ -30,7 +30,7 @@
     outline-color: white;
     outline: 2px solid white;
     color: black;
-    font-weight: 1000;
+    font-weight: 900;
     height: 75px;
     width: 100px;
     margin: 15px 15px 15px 15px;
@@ -54,7 +54,7 @@
     outline-color: white;
     outline: 2px solid white;
     border-radius: 3px;
-    font-weight: 1000;
+    font-weight: 900;
     text-align: center;
 }
 audio:not([controls]) {
