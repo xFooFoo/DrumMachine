@@ -1,0 +1,62 @@
+#root {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#contents {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+#drum-machine {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.drum-pad {
+    outline-color: white;
+    outline: 2px solid white;
+    color: black;
+    font-weight: 1000;
+    height: 75px;
+    width: 100px;
+    margin: 15px 15px 15px 15px;
+    border-radius: 3px;
+}
+
+.grid-row {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+#display {
+    width: 35%;
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 15px 15px 15px 15px;
+    outline-color: white;
+    outline: 2px solid white;
+    border-radius: 3px;
+    font-weight: 1000;
+    text-align: center;
+}
+audio:not([controls]) {
+    display: none !important;
+}
