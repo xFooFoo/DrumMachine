@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
-const audioQ = new Audio('/public/Heater-1.mp3');
-const audioW = new Audio('/public/Heater-2.mp3');
-const audioE = new Audio('/public/Heater-3.mp3');
-const audioA = new Audio('/public/Heater-4.mp3');
-const audioS = new Audio('/public/Clap.mp3');
-const audioD = new Audio('/public/OpenHH.mp3');
-const audioZ = new Audio('/public/Kick_n_Hat.mp3');
-const audioX = new Audio('/public/Kick.mp3');
-const audioC = new Audio('/public/ClosedHH.mp3');
+// Netlify's distribution directory includes the index.html and 'public' folder
+const audioQ = new Audio('Heater-1.mp3');
+const audioW = new Audio('Heater-2.mp3');
+const audioE = new Audio('Heater-3.mp3');
+const audioA = new Audio('Heater-4.mp3');
+const audioS = new Audio('Clap.mp3');
+const audioD = new Audio('OpenHH.mp3');
+const audioZ = new Audio('Kick_n_Hat.mp3');
+const audioX = new Audio('Kick.mp3');
+const audioC = new Audio('ClosedHH.mp3');
 
 const audioObjects: Record<string, HTMLAudioElement> = {
     Q: audioQ,
